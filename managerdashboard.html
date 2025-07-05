@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EMS - Manager Dashboard</title>
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="managerdashbaoard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <script src="managerdashboard.js" defer></script>
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>EMS</h2>
+      <nav>
+        <ul>
+          <li><a href="leaveapproval.html" id="open-leave-popup">Leave Approvals</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+      </nav>
+      <button class="profile-btn" id="open-profile-popup">👤 Profile</button>
+    </aside>
+
+    <!-- Main content -->
+    <div class="main-content">
+      <header class="header shadow">
+        <h1>👨‍💼 Manager Dashboard</h1>
+        <p>Monitor, Manage & Approve</p>
+      </header>
+
+      <main class="main-section">
+        <div class="employee-container" id="employee-list"></div>
+        <button class="fab" id="add-popup-button" title="Add New Employee">+</button>
+      </main>
+    </div>
+  </div>
+
+  <!-- Popup overlays -->
+  <div class="popupoverlay" id="main-popup-overlay"></div>
+
+  <!-- Add Employee Popup -->
+  <div class="popup" id="add-popup">
+    <h2>Add New Employee</h2>
+    <form id="add-employee-form">
+      <input type="text" id="eid" placeholder="Employee ID" required />
+      <input type="text" id="ename" placeholder="Employee Name" required />
+      <input type="text" id="edept" placeholder="Department" required />
+      <input type="tel" id="ephone" placeholder="Phone Number" required />
+      <input type="password" id="epassword" placeholder="Password" required />
+      <div class="form-actions">
+        <input type="submit" value="Add Employee" />
+        <button type="button" class="cancel-btn" id="cancel-add-popup">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Edit Employee Popup -->
+  <div class="popup" id="edit-popup">
+    <h2>Edit Employee</h2>
+    <form id="edit-employee-form">
+      <input type="hidden" id="edit-eid">
+      <input type="text" id="edit-ename" placeholder="Employee Name" required />
+      <input type="text" id="edit-edept" placeholder="Department" required />
+      <input type="tel" id="edit-ephone" placeholder="Phone Number" required />
+      <input type="password" id="edit-epassword" placeholder="Password" required />
+      <div class="form-actions">
+        <input type="submit" value="Update Employee" />
+        <button type="button" class="cancel-btn" id="cancel-edit-popup">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Delete Confirmation Popup -->
+  <div class="popup" id="delete-popup">
+    <h2>Confirm Deletion</h2>
+    <p>Are you sure you want to delete this employee?</p>
+    <div class="form-actions">
+      <button type="button" class="delete-confirm-btn" id="confirm-delete">Delete</button>
+      <button type="button" class="cancel-btn" id="cancel-delete-popup">Cancel</button>
+    </div>
+    <input type="hidden" id="delete-eid">
+  </div>
+</body>
+</html>

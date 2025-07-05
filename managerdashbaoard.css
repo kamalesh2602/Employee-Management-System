@@ -1,0 +1,267 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Dashboard Layout */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #34495e;
+}
+
+.profile-btn {
+  margin-top: auto;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.header p {
+  color: #7f8c8d;
+}
+
+.shadow {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Employee Container */
+.employee-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Popup Styles */
+.popupoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  display: none;
+  width: 400px;
+  max-width: 90%;
+}
+
+.popup h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.popup input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-actions input[type="submit"] {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: auto;
+}
+
+.form-actions input[type="submit"]:hover {
+  background-color: #27ae60;
+}
+
+.cancel-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cancel-btn:hover {
+  background-color: #c0392b;
+}
+
+.delete-confirm-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.delete-confirm-btn:hover {
+  background-color: #c0392b;
+}
+
+/* FAB Button */
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.fab:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+/* Employee Table Styles */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.employee-table th, .employee-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.employee-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.employee-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}

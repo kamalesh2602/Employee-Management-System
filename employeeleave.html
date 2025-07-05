@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EMS - Apply Leave</title>
+  <link rel="stylesheet" href="global.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <script src="employeeleave.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Apply Leave</h1>
+    <div id="employee-details"></div>
+  </header>
+
+  <main>
+  <form id="leave-form">
+  <label for="leavetype">Leave Type:</label>
+  <select id="leavetype">
+    <option value="">Select</option>
+    <option value="Sick">Sick</option>
+    <option value="Casual">Casual</option>
+    <option value="Vacation">Vacation</option>
+  </select>
+
+  <label for="leavereason">Reason:</label>
+  <input type="text" id="leavereason" />
+
+  <label for="start_date">Start Date:</label>
+  <input type="date" id="start_date" />
+
+  <label for="end_date">End Date:</label>
+  <input type="date" id="end_date" />
+
+  <button type="submit">Apply Leave</button>
+</form>
+
+
+
+
+  </main>
+</body>
+</html>

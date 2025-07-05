@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EMS - Manager Dashboard</title>
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="managerdashbaoard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <script src="leaveapproval.js" defer></script>
+</head>
+<body>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <h2>EMS</h2>
+      <nav>
+        <ul>
+          <li><a href="managerdashboard.html">Leave Approvals</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+      </nav>
+      <button class="profile-btn" id="open-profile-popup">👤 Profile</button>
+    </aside>
+
+    <div class="main-content">
+      <header class="header shadow">
+        <h1>👨‍💼 Manager Dashboard</h1>
+        <p>Monitor, Manage & Approve</p>
+      </header>
+
+      <div class="container">
+        <h1>📝 Leave Requests (Pending)</h1>
+        <div id="leave-requests"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
